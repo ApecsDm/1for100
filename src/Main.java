@@ -1,14 +1,13 @@
 public class Main {
     public static void main(String[] args) {
         int cash = 100;
-        int inflow = 2000;
-        int bonus = inflow / 100;
-        int limit = 1000;
+        int inflow = 1100;
         int total;
-        if (inflow >= limit) {
-            total = cash + bonus + inflow;
-        } else total = cash + inflow;
-        System.out.println(total);
+        int bonus = 0;
+        if (inflow >= 1000)
+            bonus = inflow / 100;
+        total = cash + inflow + bonus;
+        System.out.println("Баланс:" + total);
+        System.out.println("Бонусы:" + bonus);
     }
-
 }
